@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-red-900">TTES {data[0]?.title}</div>
+      <div className="bg-red-900">TTES {data[1]?.title}</div>
     </>
   );
 }
