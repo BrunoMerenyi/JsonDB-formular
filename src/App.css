@@ -1,12 +1,23 @@
 @import "tailwindcss";
 
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
+/* Optional: Add media query for mobile optimization */
+@media (max-width: 768px) {
+  main {
+    background-attachment: scroll !important;
+  }
+}
 .logo {
   height: 6em;
   padding: 1.5em;
