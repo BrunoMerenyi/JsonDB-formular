@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 
 function App() {
+  const [id, setId] = useState("");
+  const [title, setTitle] = useState("");
+  const [views, setViews] = useState("");
   const [data, setData] = useState<
     Array<{ id: string; title: string; views: number }>
   >([]);
@@ -18,9 +20,61 @@ function App() {
     console.log(data);
   }, []);
 
+  async function saveData(body: string) {
+    return fetch(`http://localhost:3001/posts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: body,
+    });
+  }
+
+  const handleClick = () => {
+    const body = JSON.stringify({
+      id: id,
+      title: title,
+      views: views,
+    });
+    console.log(body);
+    saveData(body);
+  };
+
   return (
     <>
-      <div className="bg-red-900">TTES {data[1]?.title}</div>
+      <div id="navbar">
+        <ul>
+          <li>
+            <button>TEST</button>
+          </li>
+          <li>
+            <a href="youtube.com">TEST2</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="webtitle">
+        <h1>Welcome to Technologym</h1>
+      </div>
+
+      <div id="content">
+        <input
+          value={id} 
+          placeholder="ID"
+          onChange={(e) => setId(e.target.value)}
+        ></input>
+        <input
+          value={views}
+          onChange={(e) => setViews(e.target.value)}
+          placeholder="Views"
+        ></input>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Title"
+        ></input>
+        <button onClick={handleClick}>save</button>
+      </div>
     </>
   );
 }
