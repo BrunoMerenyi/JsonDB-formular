@@ -11,9 +11,41 @@
       "views": "200"
     },
     {
-      "id": "12",
-      "title": "22",
-      "views": "21"
+      "id": "ef03"
+    },
+    {
+      "id": "1d56",
+      "phone": "122"
+    },
+    {
+      "id": "e7df"
+    },
+    {
+      "id": "b286"
+    },
+    {
+      "id": "cd8e"
+    },
+    {
+      "id": "9d91"
+    },
+    {
+      "id": "8db6"
+    },
+    {
+      "id": "2e1d"
+    },
+    {
+      "id": "e22b"
+    },
+    {
+      "id": "0b54"
+    },
+    {
+      "id": "26c1"
+    },
+    {
+      "id": "8401"
     }
   ],
   "comments": [
@@ -26,6 +58,18 @@
       "id": "2",
       "text": "another comment about post 1",
       "postId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "max.mustermann@example.com",
+      "password": "SicheresPasswort123!",
+      "first_name": "Max",
+      "last_name": "Mustermann",
+      "phone": "+49 123 456789",
+      "date_of_birth": "1990-05-15",
+      "gender": "männlich"
     }
   ],
   "profile": {
