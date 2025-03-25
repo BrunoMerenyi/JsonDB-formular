@@ -46,6 +46,17 @@ function App() {
 
   return (
     <>
+      <nav className="top-0 h-[50px] sticky flex flex-row justify-around items-center bg-amber-500 ">
+        <ul>
+          <li className="flex justify-around gap-24">
+            <a className="font-bold" href="/">
+              Home
+            </a>
+
+            <a href="/users">Users</a>
+          </li>
+        </ul>
+      </nav>
       <main style={style} className="flex flex-col justify-center">
         <h1 className="text-6xl mb-10 text-red-600 font-bold ">Technologym</h1>
 
@@ -142,11 +153,6 @@ function App() {
             </div>
           </form>
         </div>
-        <Link to={"/users"}>
-          <button className="hover:cursor-pointer mt-10 bg-neutral-100 hover:bg-neutral-300 rounded-sm w-[100px] text-3xl">
-            users
-          </button>
-        </Link>
       </main>
     </>
   );

@@ -36,6 +36,17 @@ const Users = () => {
 
   return (
     <>
+      <nav className="top-0 h-[50px] sticky flex flex-row justify-around items-center bg-amber-500 ">
+        <ul>
+          <li className="flex justify-around gap-24">
+            <a href="/">Home</a>
+
+            <a className="font-bold" href="/users">
+              Users
+            </a>
+          </li>
+        </ul>
+      </nav>
       <main
         style={style}
         className="flex flex-col justify-center items-center p-4"
