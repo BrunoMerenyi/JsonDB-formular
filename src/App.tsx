@@ -56,7 +56,7 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-around gap-52 top-0 sticky bg-background">
+      <div className="flex justify-around gap-52 top-0 sticky bg-background h-[50px]">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
