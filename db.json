@@ -80,6 +80,16 @@
       "phone": "+41 11 111 11 11",
       "date_of_birth": "1111-11-11",
       "gender": "männlich"
+    },
+    {
+      "id": "5103",
+      "email": "diego.machadofernandez7@gmail.com",
+      "password": "ölndsafodsnvdüpsvn",
+      "first_name": "Diego",
+      "last_name": "Machado Fernandez",
+      "phone": "+41 76 503 32 90",
+      "date_of_birth": "2007-10-22",
+      "gender": "männlich"
     }
   ],
   "profile": {

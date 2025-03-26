@@ -55,11 +55,6 @@ const Users = () => {
                 <a href="/">Home</a>
               </Button>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Button variant="link">
-                <a href="/users">Benutzer</a>
-              </Button>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
