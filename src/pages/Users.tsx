@@ -1,5 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { Button } from "@/components/ui/Button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/NavBar";
 
 type Users = {
   date_of_birth: string;
@@ -36,17 +47,22 @@ const Users = () => {
 
   return (
     <>
-      <nav className="top-0 h-[50px] sticky flex flex-row justify-around items-center bg-amber-500 ">
-        <ul>
-          <li className="flex justify-around gap-24">
-            <a href="/">Home</a>
-
-            <a className="font-bold" href="/users">
-              Users
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div className="flex justify-around gap-52 top-0 sticky bg-background">
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <Button variant="link">
+                <a href="/">Home</a>
+              </Button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Button variant="link">
+                <a href="/users">Benutzer</a>
+              </Button>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
       <main
         style={style}
         className="flex flex-col justify-center items-center p-4"
@@ -85,12 +101,6 @@ const Users = () => {
             </tbody>
           </table>
         </div>
-
-        <Link to={"/"}>
-          <button className="hover:cursor-pointer mt-10 bg-neutral-100 hover:bg-neutral-300 rounded-sm w-[100px] text-3xl">
-            Home
-          </button>
-        </Link>
       </main>
     </>
   );

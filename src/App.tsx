@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 
 import "./App.css";
-import { Link } from "react-router";
+import { Button } from "@/components/ui/Button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/NavBar";
 
 function App() {
   const [email, setEmail] = useState<string>();
@@ -46,19 +56,27 @@ function App() {
 
   return (
     <>
-      <nav className="top-0 h-[50px] sticky flex flex-row justify-around items-center bg-amber-500 ">
-        <ul>
-          <li className="flex justify-around gap-24">
-            <a className="font-bold" href="/">
-              Home
-            </a>
+      <div className="flex justify-around gap-52 top-0 sticky bg-background">
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <Button variant="link">
+                <a href="/">Home</a>
+              </Button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Button variant="link">
+                <a href="/users">Benutzer</a>
+              </Button>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
 
-            <a href="/users">Users</a>
-          </li>
-        </ul>
-      </nav>
       <main style={style} className="flex flex-col justify-center">
-        <h1 className="text-6xl mb-10 text-red-600 font-bold ">Technologym</h1>
+        <h1 className="text-6xl mb-10 text-green-500 font-bold ">
+          Technologym
+        </h1>
 
         <div className="flex justify-center ">
           <form
@@ -144,12 +162,13 @@ function App() {
                   <label htmlFor="weiblich">weiblich</label>
                 </div>
               </div>
-              <button
+              <Button
+                variant="outline"
                 className="hover:cursor-pointer rounded-xl  hover:bg-white/50 hover:rounded-lg text-3xl"
                 type="submit"
               >
                 save
-              </button>
+              </Button>
             </div>
           </form>
         </div>
