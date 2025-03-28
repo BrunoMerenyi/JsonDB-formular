@@ -54,6 +54,9 @@ const Users = () => {
               <Button variant="link">
                 <a href="/">Home</a>
               </Button>
+              <Button variant="link">
+                <a href="/users">Benutzer</a>
+              </Button>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

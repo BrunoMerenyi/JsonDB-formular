@@ -56,118 +56,124 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-around gap-52 top-0 sticky bg-background h-[50px]">
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Button variant="link">
-                <a href="/users">Benutzer</a>
-              </Button>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
-
-      <main style={style} className="flex flex-col justify-center">
-        <h1 className="text-6xl mb-10 text-green-500 font-bold ">
+      <div style={style}>
+        <div className="flex justify-around gap-52 top-0 sticky bg-background h-[50px]">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Button variant="link">
+                  <a href="/">Home</a>
+                </Button>
+                <Button variant="link">
+                  <a href="/users">Benutzer</a>
+                </Button>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+        <h1 className="text-6xl mb-20   sticky text-black font-bold ">
           Technologym
         </h1>
 
-        <div className="flex justify-center ">
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col bg-transparent  rounded-lg backdrop-blur-md w-full max-w-3xl justify-center"
-          >
-            <div className="bg-white/50 flex flex-col rounded-xl">
-              <input
-                className="p-5 "
-                value={email}
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="email"
-                required
-              ></input>
-              <input
-                className="p-5"
-                value={password}
-                type="password"
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="passwort"
-                required
-              ></input>
-              <input
-                className="p-5"
-                value={first_name}
-                type="text"
-                onChange={(e) => setFirst_name(e.target.value)}
-                placeholder="vorname"
-                required
-              ></input>
-              <input
-                className="p-5"
-                value={last_name}
-                type="text"
-                onChange={(e) => setlast_name(e.target.value)}
-                placeholder="name"
-                required
-              ></input>
-              <input
-                className="p-5"
-                type="tel"
-                value={phone}
-                name="phone"
-                placeholder="handy nummer"
-                pattern="^(?:\+41|0|0041)\s?(\d{2}\s?\d{3}\s?\d{2}\s?\d{2}|\d{3}\s?\d{3}\s?\d{3})$"
-                title="Swiss format: +41 XX XXX XX XX, 0XX XXX XX XX, or 07X XXX XX XX"
-                required
-                onChange={(e) => setPhone(e.target.value)}
-              ></input>
+        <main className="flex flex-col justify-center">
+          <div className="flex justify-center ">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col bg-transparent  rounded-lg backdrop-blur-md w-full max-w-3xl justify-center"
+            >
+              <div className="bg-white/50 flex flex-col justify-center rounded-xl">
+                <input
+                  className="p-5 "
+                  value={email}
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="email"
+                  required
+                ></input>
+                <input
+                  className="p-5"
+                  value={password}
+                  type="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="passwort"
+                  required
+                ></input>
+                <input
+                  className="p-5"
+                  value={first_name}
+                  type="text"
+                  onChange={(e) => setFirst_name(e.target.value)}
+                  placeholder="vorname"
+                  required
+                ></input>
+                <input
+                  className="p-5"
+                  value={last_name}
+                  type="text"
+                  onChange={(e) => setlast_name(e.target.value)}
+                  placeholder="name"
+                  required
+                ></input>
+                <input
+                  className="p-5"
+                  type="tel"
+                  value={phone}
+                  name="phone"
+                  placeholder="handy nummer"
+                  pattern="^(?:\+41|0|0041)\s?(\d{2}\s?\d{3}\s?\d{2}\s?\d{2}|\d{3}\s?\d{3}\s?\d{3})$"
+                  title="Swiss format: +41 XX XXX XX XX, 0XX XXX XX XX, or 07X XXX XX XX"
+                  required
+                  onChange={(e) => setPhone(e.target.value)}
+                ></input>
 
-              <input
-                type="date"
-                placeholder="geburtsdatum"
-                className="p-5"
-                value={date_of_birth}
-                onChange={(e) => setDate_of_birth(e.target.value)}
-                required
-              ></input>
-              <div className="flex flex-row justify-center gap-3">
-                <div>
-                  <input
-                    type="radio"
-                    id="männlich"
-                    name="gender"
-                    value="männlich"
-                    checked={gender === "männlich"}
-                    onChange={(e) => setGender(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="männlich">männlich</label>
+                <input
+                  type="date"
+                  placeholder="geburtsdatum"
+                  className="p-5"
+                  value={date_of_birth}
+                  onChange={(e) => setDate_of_birth(e.target.value)}
+                  required
+                ></input>
+                <div className="flex flex-row justify-center gap-3">
+                  <div>
+                    <input
+                      type="radio"
+                      id="männlich"
+                      name="gender"
+                      value="männlich"
+                      checked={gender === "männlich"}
+                      onChange={(e) => setGender(e.target.value)}
+                      required
+                    />
+                    <label htmlFor="männlich">männlich</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      id="weiblich"
+                      name="gender"
+                      value="weiblich"
+                      checked={gender === "weiblich"}
+                      onChange={(e) => setGender(e.target.value)}
+                      required
+                    />
+                    <label htmlFor="weiblich">weiblich</label>
+                  </div>
                 </div>
-                <div>
-                  <input
-                    type="radio"
-                    id="weiblich"
-                    name="gender"
-                    value="weiblich"
-                    checked={gender === "weiblich"}
-                    onChange={(e) => setGender(e.target.value)}
-                    required
-                  />
-                  <label htmlFor="weiblich">weiblich</label>
+                <div className="flex justify-center">
+                  <Button
+                    variant="outline"
+                    className="mt-2 hover:cursor-pointer w-[200px] rounded-xl  hover:bg-white/50  text-3xl"
+                    type="submit"
+                  >
+                    save
+                  </Button>
                 </div>
               </div>
-              <Button
-                variant="outline"
-                className="hover:cursor-pointer rounded-xl  hover:bg-white/50 hover:rounded-lg text-3xl"
-                type="submit"
-              >
-                save
-              </Button>
-            </div>
-          </form>
-        </div>
-      </main>
+            </form>
+          </div>
+        </main>
+      </div>
     </>
   );
 }

@@ -90,6 +90,16 @@
       "phone": "+41 76 503 32 90",
       "date_of_birth": "2007-10-22",
       "gender": "männlich"
+    },
+    {
+      "id": "88d5",
+      "email": "fhgfhfhgfhgf@fsdfsfwdf",
+      "password": "uzhgjghgj",
+      "first_name": "jhgjhgjh",
+      "last_name": "jhgjhgjgh",
+      "phone": "+41 78 220 67 08",
+      "date_of_birth": "3333-03-31",
+      "gender": "männlich"
     }
   ],
   "profile": {
