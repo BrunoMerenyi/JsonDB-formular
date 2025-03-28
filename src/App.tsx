@@ -45,6 +45,7 @@ function App() {
     });
     await saveData(body);
   };
+
   const style = {
     backgroundImage: `url(/gym.jpg)`,
     backgroundSize: "cover",
@@ -163,7 +164,7 @@ function App() {
                 <div className="flex justify-center">
                   <Button
                     variant="outline"
-                    className="mt-2 hover:cursor-pointer w-[200px] rounded-xl  hover:bg-white/50  text-3xl"
+                    className="mt-2 hover:cursor-pointer w-[200px] rounded-md  hover:bg-white/50  text-3xl"
                     type="submit"
                   >
                     save
