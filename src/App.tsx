@@ -72,7 +72,7 @@ function App() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <h1 className="text-6xl mb-20   sticky text-black font-bold ">
+        <h1 className="text-6xl m-20 sticky text-white font-bold ">
           Technologym
         </h1>
 
@@ -136,7 +136,7 @@ function App() {
                   required
                 ></input>
                 <div className="flex flex-row justify-center gap-3">
-                  <div>
+                  <div className="flex flex-row gap-2">
                     <input
                       type="radio"
                       id="männlich"
@@ -148,7 +148,7 @@ function App() {
                     />
                     <label htmlFor="männlich">männlich</label>
                   </div>
-                  <div>
+                  <div className="flex flex-row gap-2">
                     <input
                       type="radio"
                       id="weiblich"
