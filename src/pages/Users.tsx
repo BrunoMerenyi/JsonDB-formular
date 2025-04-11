@@ -27,9 +27,15 @@ const Users = () => {
   const [data, setData] = useState<Users[]>();
 
   const testFetch = async () => {
-    const result = await fetch("http://localhost:3001/users");
-    const test = await result.json();
-    setData(test);
+    await fetch("http://localhost:3001/users")
+      .then((response) =>
+        response.json().then((data) => {
+          setData(data);
+        })
+      )
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   };
 
   useEffect(() => {

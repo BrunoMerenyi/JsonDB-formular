@@ -100,6 +100,16 @@
       "phone": "+41 78 220 67 08",
       "date_of_birth": "3333-03-31",
       "gender": "männlich"
+    },
+    {
+      "id": "a113",
+      "email": "hallo@hallo.ch",
+      "password": "1234",
+      "first_name": "Luigi",
+      "last_name": "Cavuoti",
+      "phone": "099 890 78 99",
+      "date_of_birth": "2025-04-12",
+      "gender": "männlich"
     }
   ],
   "profile": {
